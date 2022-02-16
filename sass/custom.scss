@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+$primary: rgb(255, 0, 0);
+$secondary: #ffffff;
+$font-family-sans-serif: Roboto;
+$enable-negative-margins: true;
+
+input[type=search] {
+    background-color: $primary;
+}
+
+input[type=search]:focus {
+    background-color: white;
+}
+
+#europa-league {
+    background: url("https://cdn.shopify.com/s/files/1/0469/2774/1079/files/Camiseta_UEFA_2022_BannerTiendaOnline_copia_1080x.jpg?v=1644828180") no-repeat center;
+    height: 250px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+#texto-europa-league {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#pre-match {
+    background: url("https://cdn.shopify.com/s/files/1/0469/2774/1079/files/Banner-Tienda-Online-1903x360_02_c5fb9990-92c4-43b0-9359-136192f68648.jpg?v=1640102394") no-repeat center;
+    height: 250px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+#texto-pre-match {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#casual {
+    background: url("https://cdn.shopify.com/s/files/1/0469/2774/1079/files/ColeccionCasual_BannerTiendaOnline_1903x360_e598c50d-bb22-4356-81d8-f5b31ff28ec2.jpg?v=1636470531") no-repeat center;
+    height: 250px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+#texto-casual {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: 1px solid black;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+#myBtn:hover {
+    background-color: rgb(155, 0, 0);
+}
+
+#myBtn img {
+    height: 25px;
+    width: 25px;
+}
+
+.modal-header img {
+    height: 25px;
+    width: 25px;
+}
+
+header {
+    background: url("../img/carrousel1.jpg") no-repeat center;
+    height: 20rem;
+}
+
+@media print {
+    body {
+        filter: grayscale(100%);
+
+        #carouselExampleCaptions button {
+            display: none;
+        }
+
+        #tienda-oficial {
+            page-break-before: always;
+            margin-bottom: 1rem;
+        }
+
+        .row {
+            display: block;
+        }
+
+        .card {
+            page-break-after: always;
+        }
+
+        #europa-league, #pre-match, #casual {
+            display: none;
+        }
+
+        header {
+            display: none;
+        }
+
+        #columna-nombre {
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            display: none;
+        }
+    }
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap"

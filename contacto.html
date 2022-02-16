@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACTO</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/custom.min.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="img/favicon.png" alt="" width="30"
+                    height="30" class="d-inline-block align-text-top">
+                <b class="text-secondary">SEVILLA FC</b>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">INICIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">CONTACTO</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <header></header>
+    <div class="bg-light container py-5 mt-n5">
+        <div class="d-grid gap-5">
+            <h1 class="display-6 text-center">CONTACTO</h1>
+            <form id="form" action="https://formsubmit.co/pguefer428@iesmartinezm.es" method="POST"
+                class="row g-3 needs-validation" novalidate>
+                <div class="mb-3">
+                    <div class="row">
+                        <div id="columna-nombre" class="col-sm-6">
+                            <label for="nombre" class="form-label"><b>NOMBRE</b></label>
+                            <input type="nombre" class="form-control" id="nombre" name="nombre" placeholder="NOMBRE..."
+                                required>
+                            <div class="valid-feedback"><b>NOMBRE VÁLIDO</b>.</div>
+                            <div class="invalid-feedback"><b>INTRODUZCA UN NOMBRE VÁLIDO.</b></div>
+                        </div>
+                        <div id="columna-apellidos" class="col-sm-6">
+                            <label for="apellidos" class="form-label"><b>APELLIDOS</b></label>
+                            <input type="apellidos" class="form-control" id="apellidos" name="apellidos"
+                                placeholder="APELLIDOS..." required>
+                            <div class="valid-feedback"><b>APELLIDOS VÁLIDOS.</b></div>
+                            <div class="invalid-feedback"><b>INTRODUZCA UNOS APELLIDOS VÁLIDOS.</b></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label"><b>EMAIL</b></label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="EMAIL..." required>
+                    <div class="valid-feedback"><b>EMAIL VÁLIDO.</b></div>
+                    <div class="invalid-feedback"><b>INTRODUZCA UN EMAIL VÁLIDO.</b></div>
+                </div>
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label"><b>MENSAJE</b></label>
+                    <textarea class="form-control" id="mensaje" name="mensaje" placeholder="MENSAJE..." minlength="5"
+                        required></textarea>
+                    <div class="valid-feedback"><b>MENSAJE VÁLIDO.</b></div>
+                    <div class="invalid-feedback"><b>INTRODUZCA UN MENSAJE VÁLIDO.</b></div>
+                </div>
+                <div class="mb-3">
+                    <input type="checkbox" class="form-check-input" id="check" required>
+                    <label class="form-check-label" for="check"><b>ACEPTAR LOS TÉRMINOS DEL ENVÍO</b></label>
+                    <div class="invalid-feedback"><b>DEBE ACEPTAR LOS TÉRMINOS DEL ENVÍO.</b></div>
+                </div>
+                <button type="submit" class="btn btn-success text-secondary " id="enviar"><b>ENVIAR</b></button>
+                <button type="button" class="btn btn-primary text-secondary" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    <b>BORRAR CONTENIDO</b>
+                </button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <img src="img/papelera-de-reciclaje.png">
+                                <h5 class="modal-title" id="exampleModalLabel"><b>BORRAR CONTENIDO</b></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                ¿DESEA BORRAR EL CONTENIDO DEL FORMULARIO?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-success text-secondary"
+                                    data-bs-dismiss="modal"><b>CANCELAR</b></button>
+                                <button id="borrar" type="button" class="btn btn-primary text-secondary"
+                                    data-bs-dismiss="modal"><b>BORRAR</b></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary text-secondary" type="button" id="enviarEfecto" disabled hidden>
+                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                    <b>ENVIANDO...</b>
+                </button>
+            </form>
+            <div id="alerta" class="alert alert-success alert-dismissible fade show mt-5" role="alert" hidden>
+                <strong>FORMULARIO DE CONTACTO ENVIADO</strong> COMPRUEBE SU CORREO ELECTRÓNICO.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-primary mt-5">
+        <div class="container text-secondary text-center pt-3 pb-3">
+            <small><b>© 2022, Tienda Oficial Sevilla FC</b></small>
+        </div>
+    </footer>
+
+    <script src="js/form.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
